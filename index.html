@@ -31,11 +31,16 @@
       font-weight: bold;
     }
     section {
-  background: #1e1e1e;   /* Dark background */
-  color: #f1f1f1;        /* Light text for contrast */
-  padding: 2rem;
-  max-width: 1000px;
-  margin: auto;
+  background: #1e1e1e;   /* Full-width dark background */
+  color: #f1f1f1;        /* Light text */
+  padding: 2rem 0;       /* Top and bottom padding only */
+  width: 100%;           /* Make sure it spans full width */
+}
+
+.section-content {
+  max-width: 1000px;     /* Limit content width */
+  margin: auto;          /* Center it */
+  padding: 0 1rem;       /* Add horizontal breathing space */
 }
 
     h2 {
@@ -66,40 +71,46 @@
     <a href="#contact">Contact</a>
   </nav>
 
-  <section id="about">
+ <section id="about">
+  <div class="section-content">
     <h2>About Me</h2>
     <p style="text-align: justify;">
-   A highly self-motivated, detail-oriented, and forward-thinking Electrical Engineer with a strong passion for advancing next-generation automotive and robotic technologies. I am deeply driven by innovation in autonomous vehicles, ADAS, software-defined vehicles (SDVs), electric vehicles (EVs), and intelligent robotics. Through rigorous research and hands-on, solution-driven projects, I have developed expertise in V2X communication, Battery Management Systems (BMS), Electronic Control Units (ECUs), PCB design, and AI-powered perception and control systems. I am especially passionate about the integration of autonomous mobile robots (AMRs) within Industry 4.0 frameworks, enabling smarter, safer, and more efficient mobility and manufacturing. I bring a creative mindset, analytical problem-solving skills, and a relentless curiosity to every challenge in the evolving automotive and robotics landscape.
-</p>
-  </section>
+      A highly self-motivated, detail-oriented, and forward-thinking Electrical Engineer with a strong passion for advancing next-generation automotive and robotic technologies. I am deeply driven by innovation in autonomous vehicles, ADAS, software-defined vehicles (SDVs), electric vehicles (EVs), and intelligent robotics. Through rigorous research and hands-on, solution-driven projects, I have developed expertise in V2X communication, Battery Management Systems (BMS), Electronic Control Units (ECUs), PCB design, and AI-powered perception and control systems. I am especially passionate about the integration of autonomous mobile robots (AMRs) within Industry 4.0 frameworks, enabling smarter, safer, and more efficient mobility and manufacturing. I bring a creative mindset, analytical problem-solving skills, and a relentless curiosity to every challenge in the evolving automotive and robotics landscape.
+    </p>
+  </div>
+</section>
 
   <section id="research">
+  <div class="section-content">
     <h2>Research</h2>
     <ul>
-     <li>
-  <strong>Hybrid V2X Communication:</strong> Combining Visible Light Communication (VLC) and C-V2X to enable robust vehicle-to-vehicle and vehicle-to-infrastructure communication.
-  <ul>
-    <li>Designed a dual-channel architecture using VLC for short-range, high-precision line-of-sight communication and C-V2X for non-line-of-sight, long-range communication.</li>
-    <li>Investigated cybersecurity vulnerabilities in hybrid systems including spoofing and signal jamming, focusing on authentication and secure key exchange mechanisms.</li>
-    <li>Simulated communication under adverse weather and lighting conditions to evaluate hybrid reliability and latency.</li>
-    <li>Currently drafting a publication for IEEE Transactions on IoT under supervision of Prof. Xin Xia.</li>
-  </ul>
-  <p style="text-align: center;">
-    <img src="Figure_2_VehComm_Cybatt.jpeg" alt="VLC Hybrid Communication Cyberattack Diagram" width="90%" style="max-width: 800px; border: 1px solid #555; border-radius: 8px;">
-    <br><em>Illustration of V2X system under proper and cyber-attacked VLC signals</em>
-  </p>
-  <!-- Radar Graph: Attack impact comparison -->
-  <p style="text-align: center; margin-top: 1rem;">
-    <img src="Graph_5 (1).png" alt="Radar graph showing effects of different cyberattacks on VLC system" width="90%" style="max-width: 800px; border: 1px solid #555; border-radius: 8px;">
-    <br><em>Comparison of attack impact on signal misinterpretation, communication loss, and safety metrics</em>
-  </p>
-</li>
-      
-      <li>Battery Management Cybersecurity: Threat modeling and testbench using NXP emulator (IEEE Access 2025)</li>
-      <li>LiDAR Experiments: Object detection with STAMTEC LiDAR, ROS1 mapping using KITTI dataset</li>
-      <li>ADAS: ACC using PID, AEB configuration, LKA with CARLA, Handover analysis (L2 → L3)</li>
+      <li>
+        <strong>Hybrid V2X Communication:</strong> Combining Visible Light Communication (VLC) and C-V2X to enable robust vehicle-to-vehicle and vehicle-to-infrastructure communication.
+        <ul>
+          <li>Designed a dual-channel architecture using VLC for short-range, high-precision line-of-sight communication and C-V2X for non-line-of-sight, long-range communication.</li>
+          <li>Investigated cybersecurity vulnerabilities in hybrid systems including spoofing and signal jamming, focusing on authentication and secure key exchange mechanisms.</li>
+          <li>Simulated communication under adverse weather and lighting conditions to evaluate hybrid reliability and latency.</li>
+          <li>Currently drafting a publication for IEEE Transactions on IoT under supervision of Prof. Xin Xia.</li>
+        </ul>
+        <p style="text-align: center;">
+          <img src="Figure_2_VehComm_Cybatt.jpeg" alt="VLC Hybrid Communication Cyberattack Diagram"
+               width="90%" style="max-width: 800px; border: 1px solid #555; border-radius: 8px;">
+          <br><em>Illustration of V2X system under proper and cyber-attacked VLC signals</em>
+        </p>
+        <p style="text-align: center; margin-top: 1rem;">
+          <img src="Graph_5 (1).png" alt="Radar graph showing effects of different cyberattacks on VLC system"
+               width="90%" style="max-width: 800px; border: 1px solid #555; border-radius: 8px;">
+          <br><em>Comparison of attack impact on signal misinterpretation, communication loss, and safety metrics</em>
+        </p>
+      </li>
+
+      <li><strong>Battery Management Cybersecurity:</strong> Threat modeling and testbench using NXP emulator (IEEE Access 2025).</li>
+      <li><strong>LiDAR Experiments:</strong> Object detection with STAMTEC LiDAR, ROS1 mapping using KITTI dataset.</li>
+      <li><strong>ADAS:</strong> ACC using PID, AEB configuration, LKA with CARLA, Handover analysis (L2 → L3).</li>
     </ul>
-  </section>
+  </div>
+</section>
+
 
   <section id="projects">
     <h2>Simulation Projects</h2>
