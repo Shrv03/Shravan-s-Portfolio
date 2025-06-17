@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Research | Shravan Murlidharan</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #1e1e1e;
+      color: #f1f1f1;
+      line-height: 1.6;
+    }
+    header, footer {
+      text-align: center;
+      padding: 2rem;
+      background: #111;
+    }
+    nav {
+      background: #68C5DB;
+      padding: 1rem;
+      text-align: center;
+    }
+    nav a {
+      color: #02182B;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .section-content {
+      max-width: 1000px;
+      margin: auto;
+      padding: 2rem 1rem;
+    }
+    img {
+      max-width: 100%;
+      border: 1px solid #555;
+      border-radius: 8px;
+    }
+    ul {
+      padding-left: 1.5rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Research | Shravan Murlidharan</h1>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="research.html">Research</a>
+    <a href="projects.html">Projects</a>
+    <a href="experience.html">Experience</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <div class="section-content">
+    <h2>Hybrid V2X Communication</h2>
+    <p>This research combines Visible Light Communication (VLC) and Cellular-V2X (C-V2X) to create a resilient hybrid communication framework for connected vehicles. The system leverages VLC for short-range, high-precision line-of-sight communication and C-V2X for long-range, non-line-of-sight scenarios. We examined its cybersecurity resilience under spoofing, signal manipulation, and jamming attacks while assessing its performance in adverse conditions.</p>
+    <ul>
+      <li>Designed a dual-channel architecture using VLC and C-V2X for complementary communication robustness.</li>
+      <li>Investigated spoofing, ambient light interference, and signal injection vulnerabilities in hybrid V2X systems.</li>
+      <li>Simulated hybrid V2X response under varying weather and lighting to evaluate latency and error tolerance.</li>
+      <li>Publication in progress for IEEE Transactions on IoT, supervised by Prof. Xin Xia.</li>
+    </ul>
+    <p style="text-align: center;">
+      <img src="Figure_2_VehComm_Cybatt.jpeg" alt="VLC Hybrid Communication Cyberattack Diagram">
+      <br><em>Illustration of V2X system under proper and cyber-attacked VLC signals</em>
+    </p>
+    <p style="text-align: center;">
+      <img src="Graph_5 (1).png" alt="Radar graph showing effects of different cyberattacks on VLC system">
+      <br><em>Comparison of attack impact on signal misinterpretation, communication loss, and safety metrics</em>
+    </p>
+
+    <h2>Battery Management Cybersecurity</h2>
+    <p>Threat modeling and testbench development using NXP emulator, published in IEEE Access 2025.</p>
+    <ul>
+      <li>Designed and implemented a BMS testbench using NXP’s BATT-14 emulator, MC33664 transceiver, and S32K144EVB board to emulate real-world battery cell conditions.</li>
+      <li>Conducted threat modeling and vulnerability analysis targeting key attack vectors in BMS including SoC spoofing, voltage tampering, and DoS attacks on CAN-based networks.</li>
+      <li>Developed a custom PCB for monitoring voltage, current, and temperature parameters, improving fault detection and reducing troubleshooting time during cyberattack simulations.</li>
+      <li>Analyzed raw battery telemetry data in Jupyter Notebook to detect anomalies and validate a “battery cell confidence” metric for resilience against spoofed signals.</li>
+      <li>Achieved a projected 25% error reduction in BMS cybersecurity vulnerabilities and improved system diagnostic responsiveness.</li>
+      <li>Research published as <em>“Battery Management System: Threat Modeling, Vulnerability Analysis, and Cybersecurity Strategy”</em> in IEEE Access. 
+        <a href="https://ieeexplore.ieee.org/document/10891765" target="_blank" style="color:#4EC9B0; text-decoration: none;">[Read Paper]</a>
+      </li>
+    </ul>
+    <p style="text-align: center;">
+      <img src="Test_bench_BMS_2.jpg" alt="BMS Cybersecurity Test Bench Setup">
+      <br><em>Final BMS testbench used for emulation and cybersecurity testing using NXP S32K144 and BATT-14 emulator.</em>
+    </p>
+    <p style="text-align: center;">
+      <img src="new_fig2.png" alt="Threat Model for Battery Management Systems">
+      <br><em>Threat modeling wheel outlining cyberattack vectors targeting BMS sensors, networks, and integrity.</em>
+    </p>
+
+    <h2>Other Research Areas</h2>
+    <ul>
+      <li><strong>LiDAR Experiments:</strong> Object detection with STAMTEC LiDAR, ROS1 mapping using KITTI dataset.</li>
+      <li><strong>ADAS:</strong> ACC using PID, AEB configuration, LKA with CARLA, Handover analysis (L2 → L3).</li>
+    </ul>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Shravan Murlidharan</p>
+  </footer>
+</body>
+</html>
