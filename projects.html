@@ -46,12 +46,12 @@
     p, ul {
       text-align: justify;
     }
-    ul li {
-      margin-bottom: 1.5rem;
-    }
-    strong {
-      font-size: 1.1rem;
-      color: #4EC9B0;
+    .project-image {
+      display: block;
+      margin: 1rem auto;
+      max-width: 90%;
+      border: 1px solid #444;
+      border-radius: 8px;
     }
   </style>
 </head>
@@ -71,80 +71,79 @@
 
   <section class="section-content">
     <h2>Simulation & Hardware Projects</h2>
-    <ul>
-      <li><strong>Adaptive Cruise Control using PID Control</strong><br>
-      <em>June 2025 – Present | Perplexity AI, PID Control, Python</em><br>
-      Designed ACC system for stop-and-go and cruise scenarios. Tuned PID gains for smooth transitions and validated performance under dynamic lead vehicle behavior.</li>
-      <img src="ACC_port.png" alt="Adaptive Cruise Control Simulation Interface" class="project-image" />
-      
-      <li><strong>Autonomous Emergency Braking (AEB) System Calibration</strong><br>
-      <em>June 2025 – Present | Perplexity AI, AEB Logic, Python</em><br>
-      Simulated AEB for collision avoidance. Calibrated thresholds using pedestrian crossing scenarios and verified real-time emergency braking.</li>
 
-      <li><strong>Sensor Fusion Enhancement using nuScenes Dataset</strong><br>
-      <em>May 2025 – Present | nuScenes, OpenCV, LiDAR-Camera Fusion</em><br>
-      Fused sensor data for object detection in dense traffic environments. Boosted classification accuracy and perception consistency.</li>
+    <h3>Adaptive Cruise Control using PID Control in Stop-and-Go and Constant Speed Scenarios</h3>
+    <p><strong>June 2025 – Present | Perplexity AI, PID Control, Python, Simulation Interface</strong><br>
+    Designed and implemented a simulation-based ACC system using Perplexity AI to model ego and lead vehicle behavior under dynamic driving scenarios. Simulated two driving modes: a steady-state cruise with constant lead vehicle speed and a stop-and-go scenario to replicate congested traffic conditions. Optimized controller gains to ensure smooth velocity transitions, minimal overshoot, and safe following distances.</p>
+    <img src="ACC_port.png" alt="Adaptive Cruise Control Simulation Interface" class="project-image" />
 
-      <li><strong>LKA Scenario Simulation using CARLA</strong><br>
-      <em>May 2025 – Present | CARLA, Python, AV Control</em><br>
-      Tested LKA activation based on lane centering. Refined steering logic and validated performance under real-world scenarios.</li>
+    <h3>Autonomous Emergency Braking (AEB) System Calibration and Validation</h3>
+    <p><strong>June 2025 – Present | Perplexity AI, AEB Logic, Simulation Interface, Python</strong><br>
+    Developed an AEB system simulation using Perplexity AI to assess responses to dynamic lead vehicles and sudden pedestrian crossings. Tuned emergency braking thresholds and stopping logic. Validated the model in various scenarios to demonstrate effective collision mitigation.</p>
 
-      <li><strong>Motion Planning and Perception Analysis using Waymo Open Dataset</strong><br>
-      <em>May 2025 – Present | Waymo Dataset, Waymax, Forecasting</em><br>
-      Performed trajectory prediction and behavior modeling. Derived insights on motion forecasting for safe urban AV operation.</li>
+    <h3>Sensor Fusion Enhancement using nuScenes Dataset</h3>
+    <p><strong>May 2025 – Present | nuScenes Dataset, Sensor Fusion, Python, OpenCV, LiDAR-Camera Integration</strong><br>
+    Improved perception by fusing LiDAR and camera data from the nuScenes dataset. Enhanced object detection and classification in urban settings under different lighting and traffic conditions.</p>
 
-      <li><strong>Self-Aware AI vs Human Driving Study</strong><br>
-      <em>May 2025 – Present | Driving Data, AI Behavior</em><br>
-      Compared AI actions with human driver responses to explore empathetic decision-making for AVs.</li>
+    <h3>LKA Scenario Simulation using CARLA</h3>
+    <p><strong>May 2025 – Present | CARLA Simulator, Python, AV Control, LKA Logic</strong><br>
+    Simulated scenarios where LKA activation timing was critical for safe lane-centering. Helped determine optimal steering thresholds and improve lateral control under various driving conditions.</p>
 
-      <li><strong>LiDAR Signal Distortion Analysis for ADAS</strong><br>
-      <em>May 2025 – Present | STAMTEC LiDAR, Python, Simulink</em><br>
-      Tested blinking distortions on LiDAR and impact on ACC/LKA. Provided input for robust ADAS calibration.</li>
+    <h3>Motion Planning and Perception Analysis using Waymo Open Dataset</h3>
+    <p><strong>May 2025 – Present | Waymo Open Dataset, Waymax, Motion Forecasting</strong><br>
+    Explored real-world trajectory prediction and motion planning tasks using Waymo's datasets. Gained insights into behavior prediction and scene understanding for urban autonomous driving.</p>
 
-      <li><strong>LiDAR Sensor Placement and Detection</strong><br>
-      <em>Mar 2025 – Present | Simulink, MATLAB</em><br>
-      Simulated sensor placements on vehicle roof. Improved perception coverage by 25% for road curvature.</li>
+    <h3>Self-Aware AI vs Human Driving Study</h3>
+    <p><strong>May 2025 – Present | Driving Data, AI Behavior</strong><br>
+    Compared AI actions with human driver responses to explore empathetic decision-making for AVs.</p>
 
-      <li><strong>Real-Time Object Tracking for Lane Assistance</strong><br>
-      <em>May 2025 – Present | OpenCV, Python</em><br>
-      Developed algorithms for detecting dynamic/static objects. Reduced tracking error in crowded roads.</li>
+    <h3>LiDAR Signal Distortion Analysis for ADAS</h3>
+    <p><strong>May 2025 – Present | STAMTEC LiDAR, Python, Simulink</strong><br>
+    Tested blinking distortions on LiDAR and impact on ACC/LKA. Provided input for robust ADAS calibration.</p>
 
-      <li><strong>ADAS Level 2–3 Handover Scenario Analysis</strong><br>
-      <em>Jan 2025 – Present | Custom Driving Dataset, Python</em><br>
-      Evaluated transitions between human and AI driving. Improved automation handoff and latency.</li>
+    <h3>LiDAR Sensor Placement and Detection</h3>
+    <p><strong>Mar 2025 – Present | Simulink, MATLAB</strong><br>
+    Simulated sensor placements on vehicle roof. Improved perception coverage by 25% for road curvature.</p>
 
-      <li><strong>Low-Cost Object Detection & Digital Twin via V2V</strong><br>
-      <em>Jan 2025 – Apr 2025 | RPLIDAR, Camera, AWS 5G, ROS</em><br>
-      Built a cost-effective LiDAR-camera system with V2V. Improved mapping latency, lowered costs by 40%.</li>
+    <h3>Real-Time Object Tracking for Lane Assistance</h3>
+    <p><strong>May 2025 – Present | OpenCV, Python</strong><br>
+    Developed algorithms for detecting dynamic/static objects. Reduced tracking error in crowded roads.</p>
 
-      <li><strong>Localization & Mapping with KITTI Dataset</strong><br>
-      <em>Sept 2024 – Dec 2024 | ROS, KITTI, OpenCV</em><br>
-      Achieved centimeter-level accuracy for real-time LiDAR-based localization and detection.</li>
+    <h3>ADAS Level 2–3 Handover Scenario Analysis</h3>
+    <p><strong>Jan 2025 – Present | Custom Driving Dataset, Python</strong><br>
+    Evaluated transitions between human and AI driving. Improved automation handoff and latency.</p>
 
-      <li><strong>Real-Time Battery Monitoring PCB Design</strong><br>
-      <em>Aug 2024 – Oct 2024 | EasyEDA, Sensor Integration</em><br>
-      Designed PCB for voltage, current, and thermal monitoring in BMS setups.</li>
+    <h3>Low-Cost Object Detection & Digital Twin via V2V</h3>
+    <p><strong>Jan 2025 – Apr 2025 | RPLIDAR, Camera, AWS 5G, ROS</strong><br>
+    Built a cost-effective LiDAR-camera system with V2V. Improved mapping latency, lowered costs by 40%.</p>
 
-      <li><strong>BMS Functional Simulation</strong><br>
-      <em>Jul 2024 – Sep 2024 | Simulink, Fault Detection</em><br>
-      Simulated BMS logic including SoC/SoH tracking. Verified fault handling and diagnostics.</li>
+    <h3>Localization & Mapping with KITTI Dataset</h3>
+    <p><strong>Sept 2024 – Dec 2024 | ROS, KITTI, OpenCV</strong><br>
+    Achieved centimeter-level accuracy for real-time LiDAR-based localization and detection.</p>
 
-      <li><strong>EV & HEV Powertrain Simulation</strong><br>
-      <em>Oct 2023 – Dec 2023 | MATLAB, Simulink</em><br>
-      Optimized energy flow in hybrid vehicle models. Improved drivetrain efficiency by 10%.</li>
+    <h3>Real-Time Battery Monitoring PCB Design</h3>
+    <p><strong>Aug 2024 – Oct 2024 | EasyEDA, Sensor Integration</strong><br>
+    Designed PCB for voltage, current, and thermal monitoring in BMS setups.</p>
 
-      <li><strong>Dynamic Torque Switching in EV Motors</strong><br>
-      <em>Jan 2025 – Jun 2025 | Motor Control, Simulink</em><br>
-      Studied torque switching strategies for lightweight EVs. Enhanced motor efficiency with reduced energy loss.</li>
+    <h3>BMS Functional Simulation</h3>
+    <p><strong>Jul 2024 – Sep 2024 | Simulink, Fault Detection</strong><br>
+    Simulated BMS logic including SoC/SoH tracking. Verified fault handling and diagnostics.</p>
 
-      <li><strong>BLDC Motor Simulation for Torque Efficiency</strong><br>
-      <em>Oct 2024 – Dec 2024 | BLDC Modeling, Simulink</em><br>
-      Simulated BLDC motors under various loads. Reduced torque ripple and improved stability.</li>
-    </ul>
+    <h3>EV & HEV Powertrain Simulation</h3>
+    <p><strong>Oct 2023 – Dec 2023 | MATLAB, Simulink</strong><br>
+    Optimized energy flow in hybrid vehicle models. Improved drivetrain efficiency by 10%.</p>
+
+    <h3>Dynamic Torque Switching in EV Motors</h3>
+    <p><strong>Jan 2025 – Jun 2025 | Motor Control, Simulink</strong><br>
+    Studied torque switching strategies for lightweight EVs. Enhanced motor efficiency with reduced energy loss.</p>
+
+    <h3>BLDC Motor Simulation for Torque Efficiency</h3>
+    <p><strong>Oct 2024 – Dec 2024 | BLDC Modeling, Simulink</strong><br>
+    Simulated BLDC motors under various loads. Reduced torque ripple and improved stability.</p>
   </section>
 
   <footer>
-    <p>&copy; 2025 Shravan Murlidharan</p>
+    <p>&copy; 2025 Shravan Murlidharan | Last updated: June 2025</p>
   </footer>
 </body>
 </html>
