@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects | Shravan Murlidharan</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #1e1e1e;
+      color: #f1f1f1;
+      line-height: 1.6;
+    }
+    header, footer {
+      background: #1e1e1e;
+      color: white;
+      text-align: center;
+      padding: 1.5rem 2rem;
+    }
+    nav {
+      background: #68C5DB;
+      padding: 1rem;
+      text-align: center;
+    }
+    nav a {
+      color: #02182B;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .section-content {
+      max-width: 1000px;
+      margin: auto;
+      padding: 2rem 1rem;
+    }
+    h2 {
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 0.5rem;
+    }
+    ul {
+      padding-left: 1.5rem;
+    }
+    .project-title {
+      font-weight: bold;
+      font-size: 1.1rem;
+      margin-top: 1.5rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Shravan Murlidharan</h1>
+    <p>University of Michigan Dearborn | Simulation & Engineering Projects</p>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="research.html">Research</a>
+    <a href="projects.html">Projects</a>
+    <a href="experience.html">Experience</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <section class="section-content">
+    <h2>Simulation & Technical Projects</h2>
+
+    <div class="project-title">BLDC Motor Controller Simulation</div>
+    <ul>
+      <li>Developed a Simulink-based PID control system for Brushless DC motor using a buck converter and inverter setup.</li>
+      <li>Implemented closed-loop speed control and analyzed system response across varying load conditions.</li>
+    </ul>
+
+    <div class="project-title">Adaptive Cruise Control (ACC) using PID</div>
+    <ul>
+      <li>Created a MATLAB/Simulink simulation of ACC to maintain headway using radar data and throttle/brake actuation logic.</li>
+      <li>Validated system for stop-and-go scenarios and optimized PID gains for minimum overshoot and quick response.</li>
+    </ul>
+
+    <div class="project-title">Autonomous Emergency Braking (AEB) Validation</div>
+    <ul>
+      <li>Simulated pedestrian crossing and calibrated warning, braking, and emergency thresholds.</li>
+      <li>Validated braking response with dummy objects and time-to-collision metrics in Simulink.</li>
+    </ul>
+
+    <div class="project-title">Lane Keep Assist (LKA) using CARLA</div>
+    <ul>
+      <li>Developed LKA logic in CARLA simulator using OpenCV and lateral offset feedback.</li>
+      <li>Analyzed lane departure triggers, road curvature effects, and integration with camera-LiDAR fusion.</li>
+    </ul>
+
+    <div class="project-title">3D Dashboard & HMI Design</div>
+    <ul>
+      <li>Designed a custom 3D dashboard UI prototype for automotive HMI using INTO Design Studio.</li>
+      <li>Visualized speed, ADAS alerts, and battery health using UI principles aligned with ISO 26262.</li>
+    </ul>
+
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Shravan Murlidharan</p>
+  </footer>
+</body>
+</html>
