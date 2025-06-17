@@ -11,13 +11,12 @@
       padding: 0;
       background: #1e1e1e;
       color: #f1f1f1;
-      line-height: 1.6;
     }
     header, footer {
       background: #1e1e1e;
       color: white;
       text-align: center;
-      padding: 1.5rem 2rem;
+      padding: 2rem;
     }
     nav {
       background: #68C5DB;
@@ -33,26 +32,29 @@
     .section-content {
       max-width: 1000px;
       margin: auto;
-      padding: 2rem 1rem;
+      padding: 3rem 1rem;
     }
-    h2 {
+    h2, h3 {
       border-bottom: 2px solid #ddd;
       padding-bottom: 0.5rem;
     }
     ul {
-      padding-left: 1.5rem;
+      list-style-type: none;
+      padding-left: 0;
     }
-    .project-title {
-      font-weight: bold;
+    li {
+      margin-bottom: 2rem;
+    }
+    strong {
       font-size: 1.1rem;
-      margin-top: 1.5rem;
+      color: #4EC9B0;
     }
   </style>
 </head>
 <body>
   <header>
     <h1>Shravan Murlidharan</h1>
-    <p>University of Michigan Dearborn | Simulation & Engineering Projects</p>
+    <p>Simulation and Hardware Projects</p>
   </header>
 
   <nav>
@@ -64,38 +66,60 @@
   </nav>
 
   <section class="section-content">
-    <h2>Simulation & Technical Projects</h2>
-
-    <div class="project-title">BLDC Motor Controller Simulation</div>
+    <h2>Projects</h2>
     <ul>
-      <li>Developed a Simulink-based PID control system for Brushless DC motor using a buck converter and inverter setup.</li>
-      <li>Implemented closed-loop speed control and analyzed system response across varying load conditions.</li>
-    </ul>
+      <li><strong>Motion Planning and Perception Analysis using Waymo Open Dataset</strong><br>
+      <em>May 2025 – Present | Waymo Open Dataset, Waymax, Motion Forecasting</em><br>
+      Explored real-world trajectory prediction and motion planning tasks using Waymo's datasets. Gained insights into behavior prediction and scene understanding for urban autonomous driving.</li>
 
-    <div class="project-title">Adaptive Cruise Control (ACC) using PID</div>
-    <ul>
-      <li>Created a MATLAB/Simulink simulation of ACC to maintain headway using radar data and throttle/brake actuation logic.</li>
-      <li>Validated system for stop-and-go scenarios and optimized PID gains for minimum overshoot and quick response.</li>
-    </ul>
+      <li><strong>Self-Aware AI vs Human Driving Study</strong><br>
+      <em>May 2025 – Present | Real-World Driving Data, AI Behavior Analysis</em><br>
+      Compared AI decision-making with human emotional responses. Contributed to a conceptual framework for empathetic AI in autonomous driving systems.</li>
 
-    <div class="project-title">Autonomous Emergency Braking (AEB) Validation</div>
-    <ul>
-      <li>Simulated pedestrian crossing and calibrated warning, braking, and emergency thresholds.</li>
-      <li>Validated braking response with dummy objects and time-to-collision metrics in Simulink.</li>
-    </ul>
+      <li><strong>LiDAR Signal Distortion Analysis for ADAS Evaluation</strong><br>
+      <em>May 2025 – Present | STAMTEC LiDAR, Python, Simulink</em><br>
+      Conducted LiDAR signal distortion tests to assess impact on ADAS functions. Informed design refinements for robust ACC, LKA, and AEB.</li>
 
-    <div class="project-title">Lane Keep Assist (LKA) using CARLA</div>
-    <ul>
-      <li>Developed LKA logic in CARLA simulator using OpenCV and lateral offset feedback.</li>
-      <li>Analyzed lane departure triggers, road curvature effects, and integration with camera-LiDAR fusion.</li>
-    </ul>
+      <li><strong>LiDAR Sensor Placement and Object Detection Simulation</strong><br>
+      <em>Mar 2025 – Present | Simulink, LiDAR Modeling, MATLAB</em><br>
+      Simulated LiDAR placements to analyze detection performance on curved roads. Improved perception coverage by 25%.</li>
 
-    <div class="project-title">3D Dashboard & HMI Design</div>
-    <ul>
-      <li>Designed a custom 3D dashboard UI prototype for automotive HMI using INTO Design Studio.</li>
-      <li>Visualized speed, ADAS alerts, and battery health using UI principles aligned with ISO 26262.</li>
-    </ul>
+      <li><strong>Real-Time Object Tracking for Lane Assistance</strong><br>
+      <em>May 2025 – Present | OpenCV, Python</em><br>
+      Developed object tracking to support LKA and path planning. Reduced tracking errors by 30% in dense scenarios.</li>
 
+      <li><strong>ADAS Level 2–3 Handover Scenario Analysis</strong><br>
+      <em>Jan 2025 – Present | Python, Custom Driving Data</em><br>
+      Analyzed transitions between human and AI control. Supported smoother L2 to L3 transitions and latency reduction.</li>
+
+      <li><strong>Low-Cost Object Detection & Digital Twin System via V2V</strong><br>
+      <em>Jan 2025 – Apr 2025 | RPLIDAR A1M8, ELP Camera, ROS, AWS 5G</em><br>
+      Designed LiDAR-camera fusion system for real-time digital twin creation using 5G. Reduced deployment cost by 40%.</li>
+
+      <li><strong>Localization & Mapping using ROS with KITTI Dataset</strong><br>
+      <em>Sept 2024 – Dec 2024 | ROS, KITTI, OpenCV</em><br>
+      Built real-time localization and object detection with LiDAR data. Achieved centimeter-level mapping accuracy.</li>
+
+      <li><strong>Real-Time Battery Monitoring PCB Design</strong><br>
+      <em>Aug 2024 – Oct 2024 | EasyEDA, Sensor Integration</em><br>
+      Designed custom PCB for high-fidelity real-time battery monitoring. Ready for BMS integration.</li>
+
+      <li><strong>BMS Functional Simulation</strong><br>
+      <em>Jul 2024 – Sep 2024 | MATLAB Simulink</em><br>
+      Simulated BMS logic for SoC/SoH evaluation and fault detection. Enhanced diagnostic visibility.</li>
+
+      <li><strong>EV & HEV Powertrain Simulation</strong><br>
+      <em>Oct 2023 – Dec 2023 | MATLAB, Simulink</em><br>
+      Simulated EV/HEV powertrain systems for optimal energy flow. Boosted system efficiency by 10%.</li>
+
+      <li><strong>Dynamic Torque Switching Strategy in EV Motors</strong><br>
+      <em>Jan 2025 – Jun 2025 | MATLAB, Simulink, Motor Control</em><br>
+      Researched DTS to reduce energy loss and enhance torque. Enabled compact motors to perform more efficiently.</li>
+
+      <li><strong>BLDC Motor Simulation for Torque Efficiency</strong><br>
+      <em>Oct 2024 – Dec 2024 | MATLAB, Simulink</em><br>
+      Simulated BLDC motor for EV use. Tuned control parameters to minimize ripple and improve torque delivery.</li>
+    </ul>
   </section>
 
   <footer>
@@ -103,3 +127,4 @@
   </footer>
 </body>
 </html>
+
