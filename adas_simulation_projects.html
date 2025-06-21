@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ADAS Simulation Projects | Shravan Murlidharan</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #1e1e1e;
+      color: #f1f1f1;
+      line-height: 1.6;
+    }
+    header {
+      background: #1e1e1e;
+      color: white;
+      text-align: center;
+      padding: 1rem 2rem;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: #111;
+    }
+    nav {
+      background: #68C5DB;
+      padding: 1rem;
+      text-align: center;
+    }
+    nav a {
+      color: #02182B;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .section-content {
+      max-width: 1000px;
+      margin: auto;
+      padding: 2rem 1rem;
+    }
+    h2 {
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 0.5rem;
+      margin-bottom: 2rem;
+    }
+    h3 {
+      margin-top: 2rem;
+      color: #4EC9B0;
+    }
+    p, ul {
+      text-align: justify;
+    }
+    .project-image {
+      display: block;
+      margin: 1rem auto;
+      max-width: 90%;
+      border: 1px solid #444;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Shravan Murlidharan</h1>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="skills.html">Skills</a>
+    <a href="experience.html">Experience</a>
+    <a href="research.html">Research</a>
+    <a href="projects.html">Projects</a>
+    <a href="adas_simulation_projects.html">ADAS Simulation Projects</a>
+    <a href="conference.html">Conferences</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <section class="section-content">
+    <h2>ADAS Simulation Projects</h2>
+
+    <p style="text-align: center; margin-top: 2rem;">
+      <a href="https://drive.google.com/drive/folders/1R0nXKHrzSOraVKzlC1E_D8E8nSZK93u8?usp=sharing"
+         target="_blank"
+         style="color: #4EC9B0; font-weight: bold; text-decoration: none;">
+        📁 View All Project Files & Demos
+      </a>
+    </p>
+<div class="project-entry">
+  <h3 style="color: #4EC9B0;">OpenPilot Simulation: LKA Demonstration</h3>
+  <p><strong>Jun 2025 | OpenPilot, CARLA Simulator, Python</strong></p>
+  <img src="openpilot_ss_1.png" alt="OpenPilot Demo Screenshot" style="max-width: 100%; border-radius: 8px; margin: 1rem 0;">
+  <p>
+    <strong>What is OpenPilot?</strong><br>
+    OpenPilot is an open-source advanced driver assistance system (ADAS) developed by comma.ai. It enables functionalities like Lane Keeping Assist (LKA), Adaptive Cruise Control (ACC), and Automatic Lane Change on supported vehicles. OpenPilot uses camera-based perception, deep learning models, and sensor fusion to control steering, throttle, and braking.
+  </p>
+  <p>
+    <strong>Project Summary:</strong><br>
+    I successfully ran the <code>replay.py</code> and <code>run_bridge.py</code> demo scripts in conjunction with the CARLA simulator to simulate real-time ADAS behavior using OpenPilot. The system processed live camera feed and lane detection through the UI and maintained safe vehicle control via CARLA’s simulated highway environment.
+  </p>
+  <ul>
+    <li>Executed a full loop of OpenPilot’s perception → planning → control pipeline in a virtual testbed.</li>
+    <li>Visual interface confirmed correct playback of speed (49 mph) and max limit recognition (68 mph).</li>
+    <li>Tested radar-based and camera-based publishers such as longitudinal and lateral planning modules.</li>
+  </ul>
+  <p><em>“This setup demonstrated OpenPilot’s ability to perceive and control vehicles autonomously within a simulated highway scenario.”</em></p>
+  </div>
+
+    <div class="project-entry">
+  <h3 style="color: #4EC9B0;">Camera-Based Lane Keeping Assist (LKA) Using Behavioral Cloning in CARLA Simulator</h3>
+  <p><strong>Mar 2025 | Python, PyTorch, CARLA Simulator</strong></p>
+  <img src="LKA_BC_CARLA.png" alt="Lane Keeping Assist in CARLA" style="max-width: 100%; border-radius: 8px; margin: 1rem 0;">
+  <p>
+    This project demonstrates an end-to-end Lane Keeping Assist (LKA) system using behavioral cloning. A deep learning model was trained to steer a simulated vehicle by imitating human driving behavior through front camera input within the CARLA simulator.
+  </p>
+  <ul>
+    <li><strong>Data Collection:</strong> Recorded front camera frames and steering angles while manually driving a vehicle in Town10 (CARLA).</li>
+    <li><strong>Model Architecture:</strong> CNN inspired by NVIDIA’s PilotNet architecture. Input: image → Output: steering angle.</li>
+    <li><strong>Training:</strong> Trained using PyTorch with MSE loss and Adam optimizer. Achieved smooth convergence and generalization within simulation.</li>
+    <li><strong>Inference:</strong> Real-time steering prediction using live camera feed; vehicle navigated lanes autonomously without maps or waypoints.</li>
+    <li><strong>Result:</strong> Successfully implemented camera-only LKA at ~20 FPS with smooth lane tracking performance.</li>
+  </ul>
+  <p><em>“The car learns to follow lanes just by watching how I drive — no maps, no LiDAR, just vision and imitation.”</em></p>
+</div>
+
+    <div class="project-entry">
+    <h3 style="color: #4EC9B0;">Emergency Brake Light (EEBL) – Hybrid V2X Simulation</h3>
+    <p><strong>June 2025 | React.js, JavaScript, HTML/CSS</strong></p>
+    <img src="VLC_SIM_1.png" alt="EEBL Hybrid V2X Simulation" style="max-width: 100%; border-radius: 8px; margin: 1rem 0;">
+   <p>
+    Built a real-time vehicle-to-vehicle (V2V) emergency alert system integrating <strong>Visible Light Communication (VLC)</strong> and <strong>C-V2X (5G)</strong> technologies. 
+    The simulation involved three vehicles where Vehicle 1 performs an emergency brake, and the signal is relayed instantly to following vehicles using both communication modes.
+   </p>
+    <ul>
+    <li>Developed dynamic speed control and emergency braking logic with visual feedback.</li>
+    <li>Designed a communication stack toggling between VLC and C-V2X with latency control.</li>
+    <li>Simulated realistic driving and braking scenarios to test robustness of hybrid communication.</li>
+    <li>Demonstrated enhanced safety by ensuring downstream vehicles responded within 25ms latency.</li>
+    </ul>
+   </div>
+
+    <div class="project-entry">
+    <h3 style="color: #4EC9B0;">V2X Basic Safety Message (BSM) Simulation</h3>
+    <p><strong>May 2025 | React.js, JavaScript, HTML/CSS</strong></p>
+    <img src="V2X_SIM_2.jpg" alt="V2X Basic Safety Message Simulation" style="max-width: 100%; border-radius: 8px; margin: 1rem 0;">
+    <p>
+    Developed a real-time simulation environment to demonstrate the transmission of <strong>Basic Safety Messages (BSM)</strong> in a connected vehicle setup using Vehicle-to-Everything (V2X) communication. 
+    The system tracks the speeds of three vehicles and their relative positioning while visualizing the communication radius and message propagation in real-time.
+    </p>
+   <ul>
+    <li>Enabled message generation and broadcasting from a selected vehicle with adjustable speed control for all vehicles.</li>
+    <li>Visualized dynamic communication zones with range overlays to depict BSM reach across the convoy.</li>
+    <li>Implemented emergency braking logic to observe system response during critical scenarios.</li>
+    <li>Highlighted V2X reliability under different speed profiles and real-time message verification.</li>
+   </ul>
+   </div>
+
+
+    <h3>Adaptive Cruise Control using PID Control in Stop-and-Go and Constant Speed Scenarios</h3>
+    <p><strong>June 2025 – Present | Perplexity AI, PID Control, Python, Simulation Interface</strong><br>
+    Designed and implemented a simulation-based ACC system using Perplexity AI to model ego and lead vehicle behavior under dynamic driving scenarios. Simulated two driving modes: a steady-state cruise with constant lead vehicle speed and a stop-and-go scenario to replicate congested traffic conditions. Optimized controller gains to ensure smooth velocity transitions, minimal overshoot, and safe following distances.</p>
+    <img src="ACC_port.png" alt="Adaptive Cruise Control Simulation Interface" class="project-image" />
+    <p><a href="https://drive.google.com/file/d/1ZDP6FlXdrAcftasDlveqtvNUZCtld9p7/view?usp=sharing" target="_blank" style="color: #4EC9B0;">View Simulation Output</a></p>
+
+    <h3>Autonomous Emergency Braking (AEB) System Calibration and Validation</h3>
+    <p><strong>June 2025 – Present | Perplexity AI, AEB Logic, Simulation Interface, Python</strong><br>
+    Developed an AEB system simulation using Perplexity AI to assess responses to dynamic lead vehicles and sudden pedestrian crossings. Tuned emergency braking thresholds and stopping logic. Validated the model in various scenarios to demonstrate effective collision mitigation.</p>
+    <img src="AEB_port.png" alt="Autonomous Emergency Braking Simulation Interface" class="project-image" />
+    <p><a href="https://drive.google.com/file/d/15UO4-cG202-j1MVHAxl68xpgVIjlypGq/view?usp=sharing" target="_blank" style="color: #4EC9B0;">View Simulation Output</a></p>
+
+    <h3>Sensor Fusion Enhancement using nuScenes Dataset</h3>
+    <p><strong>May 2025 – Present | nuScenes Dataset, Sensor Fusion, Python, OpenCV, LiDAR-Camera Integration</strong><br>
+    Improved perception by fusing LiDAR and camera data from the nuScenes dataset. Enhanced object detection and classification in urban settings under different lighting and traffic conditions.</p>
+    <img src="nuscenes_port.png" alt="Live Obeject Detection s=using the Lidar system from the nuScenes Dataset" class="project-image" />
+
+    <h3>LKA Scenario Simulation using CARLA</h3>
+    <p><strong>May 2025 – Present | CARLA Simulator, Python, AV Control, LKA Logic</strong><br>
+    Simulated scenarios where LKA activation timing was critical for safe lane-centering. Helped determine optimal steering thresholds and improve lateral control under various driving conditions.</p>
+    <img src="carla_port.png" alt="LKA using CARLA" class="project-image" />
+    <p><a href="https://drive.google.com/file/d/12NH6DyK0kZWk-hIiHFj0fl-bjZV8ty86/view?usp=sharing" target="_blank" style="color: #4EC9B0;">View Simulation Output</a></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Shravan Murlidharan | Last updated: June 2025</p>
+  </footer>
+</body>
+</html>
+
