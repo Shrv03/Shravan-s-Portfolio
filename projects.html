@@ -95,6 +95,23 @@
     </a>
     </p>
     <div class="project-entry">
+  <h3 style="color: #4EC9B0;">Camera-Based Lane Keeping Assist (LKA) Using Behavioral Cloning in CARLA Simulator</h3>
+  <p><strong>Mar 2025 | Python, PyTorch, CARLA Simulator</strong></p>
+  <img src="LKA_BC_CARLA.png" alt="Lane Keeping Assist in CARLA" style="max-width: 100%; border-radius: 8px; margin: 1rem 0;">
+  <p>
+    This project demonstrates an end-to-end Lane Keeping Assist (LKA) system using behavioral cloning. A deep learning model was trained to steer a simulated vehicle by imitating human driving behavior through front camera input within the CARLA simulator.
+  </p>
+  <ul>
+    <li><strong>Data Collection:</strong> Recorded front camera frames and steering angles while manually driving a vehicle in Town10 (CARLA).</li>
+    <li><strong>Model Architecture:</strong> CNN inspired by NVIDIA’s PilotNet architecture. Input: image → Output: steering angle.</li>
+    <li><strong>Training:</strong> Trained using PyTorch with MSE loss and Adam optimizer. Achieved smooth convergence and generalization within simulation.</li>
+    <li><strong>Inference:</strong> Real-time steering prediction using live camera feed; vehicle navigated lanes autonomously without maps or waypoints.</li>
+    <li><strong>Result:</strong> Successfully implemented camera-only LKA at ~20 FPS with smooth lane tracking performance.</li>
+  </ul>
+  <p><em>“The car learns to follow lanes just by watching how I drive — no maps, no LiDAR, just vision and imitation.”</em></p>
+</div>
+
+    <div class="project-entry">
     <h3 style="color: #4EC9B0;">Emergency Brake Light (EEBL) – Hybrid V2X Simulation</h3>
     <p><strong>June 2025 | React.js, JavaScript, HTML/CSS</strong></p>
     <img src="VLC_SIM_1.png" alt="EEBL Hybrid V2X Simulation" style="max-width: 100%; border-radius: 8px; margin: 1rem 0;">
