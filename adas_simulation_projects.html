@@ -192,7 +192,29 @@
     <div class="project-entry">
     <h3 style="color: #4EC9B0;">V2X Basic Safety Message (BSM) Simulation</h3>
     <p><strong>May 2025 | React.js, JavaScript, HTML/CSS</strong></p>
-    <img src="V2X_SIM_2.jpg" alt="V2X Basic Safety Message Simulation" style="max-width: 100%; border-radius: 8px; margin: 1rem 0;">
+    <div class="video-thumbnail" style="text-align: center;">
+  <img src="your_thumbnail_image.png" alt="ADAS Demo" style="max-width: 100%; cursor: pointer; border-radius: 8px;" onclick="openVideoModal2()">
+  <p><em>Click to play ADAS simulation demo</em></p>
+</div>
+
+<!-- Modal for second video -->
+<div id="videoModal2" style="display: none; position: fixed; z-index: 1000; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8);">
+  <div style="position: relative; width: 80%; margin: 5% auto;">
+    <iframe src="https://drive.google.com/file/d/1ZOQUeN-G3xHXvEkPTjugu7NcYiqWjkWP/preview"
+            width="100%" height="480" allow="autoplay"
+            style="border: none; border-radius: 8px;"></iframe>
+    <button onclick="closeVideoModal2()" style="position: absolute; top: -30px; right: 0; background: #4EC9B0; border: none; color: white; padding: 8px 12px; border-radius: 4px; cursor: pointer;">Close</button>
+  </div>
+</div>
+
+<script>
+  function openVideoModal2() {
+    document.getElementById("videoModal2").style.display = "block";
+  }
+  function closeVideoModal2() {
+    document.getElementById("videoModal2").style.display = "none";
+  }
+</script>
     <p>
     Developed a real-time simulation environment to demonstrate the transmission of <strong>Basic Safety Messages (BSM)</strong> in a connected vehicle setup using Vehicle-to-Everything (V2X) communication. 
     The system tracks the speeds of three vehicles and their relative positioning while visualizing the communication radius and message propagation in real-time.
