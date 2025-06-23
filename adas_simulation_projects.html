@@ -109,12 +109,30 @@
   <p><em>“This setup demonstrated OpenPilot’s ability to perceive and control vehicles autonomously within a simulated highway scenario.”</em></p>
 
   <!-- Embedded video section -->
-  <div style="text-align: center; margin-top: 1.5rem;">
-    <video width="90%" controls poster="openpilot_ss_1.png">
-      <source src="sunnypilot_4.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-    <br><em>Demo: OpenPilot running in Ubuntu system with UI playback</em>
+  <div class="video-thumbnail" style="text-align: center;">
+  <img src="openpilot_ss_1.png" alt="OpenPilot Demo" style="max-width: 100%; cursor: pointer; border-radius: 8px;" onclick="openVideoModal()">
+  <p><em>Click to play OpenPilot simulation demo</em></p>
+</div>
+
+<!-- Modal -->
+<div id="videoModal" style="display: none; position: fixed; z-index: 1000; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8);">
+  <div style="position: relative; width: 80%; margin: 5% auto;">
+    <iframe src="https://drive.google.com/file/d/1b5tj0GVpO5LMKDLNOde5dJBqkNS6tzIt/preview"
+            width="100%" height="480" allow="autoplay"
+            style="border: none; border-radius: 8px;"></iframe>
+    <button onclick="closeVideoModal()" style="position: absolute; top: -30px; right: 0; background: #4EC9B0; border: none; color: white; padding: 8px 12px; border-radius: 4px; cursor: pointer;">Close</button>
+  </div>
+</div>
+
+<script>
+  function openVideoModal() {
+    document.getElementById("videoModal").style.display = "block";
+  }
+  function closeVideoModal() {
+    document.getElementById("videoModal").style.display = "none";
+  }
+</script>
+
   </div>
 
   <!-- Optional: Google Drive demo link -->
