@@ -109,31 +109,45 @@
     🔗 View Colab Notebook
   </a>
 
-  <!-- Video Thumbnail and Modal -->
-  <div class="video-thumbnail" style="text-align: center; margin-top: 20px;">
-    <img src="Yolo_1.png" alt="YOLOv8 Detection Output Demo" style="max-width: 100%; cursor: pointer; border-radius: 8px;" onclick="openVideoModalYOLO()">
-    <p><em>Click to play YOLOv8 detection demo on KITTI video</em></p>
+  <!-- Thumbnail Display -->
+  <div class="video-thumbnail" style="text-align: center; margin-top: 1rem;">
+    <img src="V2X_SIM_2.jpg" alt="YOLOv8 KITTI Detection Demo" 
+         style="max-width: 100%; cursor: pointer; border-radius: 8px;" 
+         onclick="openYoutubeModal_yolo()">
+    <p><em>Click to play YOLOv8 Object Detection demo</em></p>
   </div>
 
-  <div id="videoModalYOLO" style="display: none; position: fixed; z-index: 1000; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8);">
+  <!-- Modal -->
+  <div id="youtubeModal_yolo" 
+       style="display: none; position: fixed; z-index: 1000; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8);">
     <div style="position: relative; width: 80%; margin: 5% auto;">
-      <iframe src="https://drive.google.com/file/d/16zWGXEwCgf5foAqyBEXnXX5PQ-Du1Oxr/preview"
-              width="100%" height="480" allow="autoplay"
-              style="border: none; border-radius: 8px;"></iframe>
-      <button onclick="closeVideoModalYOLO()" style="position: absolute; top: -30px; right: 0; background: #4EC9B0; border: none; color: white; padding: 8px 12px; border-radius: 4px; cursor: pointer;">Close</button>
+      <iframe id="youtubeIframe_yolo"
+              width="100%" height="480"
+              src=""
+              frameborder="0" allow="autoplay; encrypted-media" allowfullscreen
+              style="border-radius: 8px;"></iframe>
+      <button onclick="closeYoutubeModal_yolo()" 
+              style="position: absolute; top: -30px; right: 0; background: #4EC9B0; border: none; color: white; padding: 8px 12px; border-radius: 4px; cursor: pointer;">Close</button>
     </div>
   </div>
 
+  <!-- Script to Control Modal -->
   <script>
-    function openVideoModalYOLO() {
-      document.getElementById("videoModalYOLO").style.display = "block";
+    function openYoutubeModal_yolo() {
+      const modal = document.getElementById('youtubeModal_yolo');
+      const iframe = document.getElementById('youtubeIframe_yolo');
+      iframe.src = "https://www.youtube.com/embed/RXV8A8ncmEg?autoplay=1";
+      modal.style.display = 'block';
     }
-    function closeVideoModalYOLO() {
-      document.getElementById("videoModalYOLO").style.display = "none";
+
+    function closeYoutubeModal_yolo() {
+      const modal = document.getElementById('youtubeModal_yolo');
+      const iframe = document.getElementById('youtubeIframe_yolo');
+      iframe.src = "";
+      modal.style.display = 'none';
     }
   </script>
 </div>
-
 
     <div class="project-entry">
     <h3 style="color: #4EC9B0;">Virtual Sensor for Fuel Consumption Estimation</h3>
