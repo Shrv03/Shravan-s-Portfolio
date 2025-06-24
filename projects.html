@@ -89,6 +89,53 @@
     <h2>Simulation & Hardware Projects</h2>
 
     <div class="project-entry">
+  <h3 style="color: #4EC9B0;">YOLOv8 Object Detection on KITTI Dataset</h3>
+  <p><strong>June 2025 | Python, YOLOv8, OpenCV, KITTI Dataset</strong></p>
+  <p>
+    Built a real-time object detection pipeline using the YOLOv8 model on the KITTI dataset to identify vehicles, traffic lights, and road signs in urban scenes.
+  </p>
+  <ul>
+    <li>Used the Ultralytics YOLOv8 model for high-speed inference on KITTI video frames.</li>
+    <li>Annotated objects such as cars, trucks, and traffic signals with confidence scores.</li>
+    <li>Processed and visualized detection results in video format for ADAS-style applications.</li>
+    <li>Integrated detection output into Google Colab for easy experimentation and visualization.</li>
+  </ul>
+  <p><em>“This project enhanced my expertise in visual perception systems for autonomous driving.”</em></p>
+
+  <!-- Button for Colab Notebook -->
+  <a href="https://colab.research.google.com/drive/1xiC37GW185wEqKQnNFBSTON-xRve6P6W?usp=sharing"
+     target="_blank"
+     style="display: inline-block; padding: 8px 16px; background-color: #ffc107; color: #000; border-radius: 8px; text-decoration: none; margin-top: 10px;">
+    🔗 View Colab Notebook
+  </a>
+
+  <!-- Video Thumbnail and Modal -->
+  <div class="video-thumbnail" style="text-align: center; margin-top: 20px;">
+    <img src="Yolo_1.png" alt="YOLOv8 Detection Output Demo" style="max-width: 100%; cursor: pointer; border-radius: 8px;" onclick="openVideoModalYOLO()">
+    <p><em>Click to play YOLOv8 detection demo on KITTI video</em></p>
+  </div>
+
+  <div id="videoModalYOLO" style="display: none; position: fixed; z-index: 1000; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8);">
+    <div style="position: relative; width: 80%; margin: 5% auto;">
+      <iframe src="https://drive.google.com/file/d/16zWGXEwCgf5foAqyBEXnXX5PQ-Du1Oxr/preview"
+              width="100%" height="480" allow="autoplay"
+              style="border: none; border-radius: 8px;"></iframe>
+      <button onclick="closeVideoModalYOLO()" style="position: absolute; top: -30px; right: 0; background: #4EC9B0; border: none; color: white; padding: 8px 12px; border-radius: 4px; cursor: pointer;">Close</button>
+    </div>
+  </div>
+
+  <script>
+    function openVideoModalYOLO() {
+      document.getElementById("videoModalYOLO").style.display = "block";
+    }
+    function closeVideoModalYOLO() {
+      document.getElementById("videoModalYOLO").style.display = "none";
+    }
+  </script>
+</div>
+
+
+    <div class="project-entry">
     <h3 style="color: #4EC9B0;">Virtual Sensor for Fuel Consumption Estimation</h3>
      <p><strong>May 2025 | Python, Machine Learning, Random Forest</strong></p>
     <p>
