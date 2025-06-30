@@ -87,7 +87,7 @@
 
   <section class="section-content">
     <h2>Simulation & Hardware Projects</h2>
-  <div class="project-entry">
+ <div class="project-entry">
   <h3 style="color: #4EC9B0;">Trajectory Prediction of Dynamic Objects in KITTI Dataset</h3>
   <p><strong>June 2025 | Python, LSTM, KITTI Dataset, Google Colab</strong></p>
   <p>
@@ -102,19 +102,52 @@
   <p><em>“This project strengthened my skills in spatiotemporal sequence modeling and motion prediction for AVs.”</em></p>
 
   <!-- Button for Colab Notebook -->
-  <a href="https://colab.research.google.com/drive/1DAxZ7xLJqJOyQIAlbMXcSyLyJQ1NA1aG?usp=sharing"
+  <a href="https://colab.research.google.com/drive/1NWkRmSp1vg2t9ALK6uzAAh7pZ_kxOxCj?usp=sharing"
      target="_blank"
      style="display: inline-block; padding: 8px 16px; background-color: #ffc107; color: #000; border-radius: 8px; text-decoration: none; margin-top: 10px;">
     🔗 View Colab Notebook
   </a>
 
-  <!-- Image Display -->
+  <!-- Thumbnail for YouTube Modal -->
   <div class="video-thumbnail" style="text-align: center; margin-top: 1rem;">
-    <img src="TP_1.png" alt="Trajectory Prediction on KITTI" 
-         style="max-width: 100%; border-radius: 8px;">
-    <p><em>Trajectory prediction of dynamic agents (cars, cyclists, pedestrians) in a KITTI frame</em></p>
+    <img src="TP_1.png" alt="Trajectory Prediction" 
+         style="max-width: 100%; cursor: pointer; border-radius: 8px;" 
+         onclick="openTrajectoryModal()">
+    <p><em>Click to watch trajectory prediction demo</em></p>
   </div>
+
+  <!-- YouTube Modal -->
+  <div id="trajectoryModal" 
+       style="display: none; position: fixed; z-index: 1000; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8);">
+    <div style="position: relative; width: 80%; margin: 5% auto;">
+      <iframe id="trajectoryIframe"
+              width="100%" height="480"
+              src=""
+              frameborder="0" allow="autoplay; encrypted-media" allowfullscreen
+              style="border-radius: 8px;"></iframe>
+      <button onclick="closeTrajectoryModal()" 
+              style="position: absolute; top: -30px; right: 0; background: #4EC9B0; border: none; color: white; padding: 8px 12px; border-radius: 4px; cursor: pointer;">Close</button>
+    </div>
+  </div>
+
+  <!-- JavaScript for Modal -->
+  <script>
+    function openTrajectoryModal() {
+      const modal = document.getElementById('trajectoryModal');
+      const iframe = document.getElementById('trajectoryIframe');
+      iframe.src = "https://www.youtube.com/embed/vVgs2PL9FLg?autoplay=1";
+      modal.style.display = 'block';
+    }
+
+    function closeTrajectoryModal() {
+      const modal = document.getElementById('trajectoryModal');
+      const iframe = document.getElementById('trajectoryIframe');
+      iframe.src = "";
+      modal.style.display = 'none';
+    }
+  </script>
 </div>
+
 
   <div class="project-entry">
   <h3 style="color: #4EC9B0;">Feature Detection on KITTI Dataset</h3>
